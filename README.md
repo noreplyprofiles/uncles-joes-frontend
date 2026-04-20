@@ -63,3 +63,5 @@ Notes:
 This is a read-first system (no ordering/payment processing)
 All data is sourced from the FastAPI backend connected to BigQuery
 AI tools may have been used to assist development, but final implementation is fully reviewed and tested
+
+Update README
