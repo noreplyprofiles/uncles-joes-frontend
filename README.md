@@ -70,3 +70,6 @@ This repository contains the frontend application for Uncle Joe's Coffee Company
 Frontend Lead: Nico Mann
 
 Update README
+
+Update (2.0)
+
