@@ -65,3 +65,6 @@ All data is sourced from the FastAPI backend connected to BigQuery
 AI tools may have been used to assist development, but final implementation is fully reviewed and tested
 
 Update README
+
+Update (2.0)
+
