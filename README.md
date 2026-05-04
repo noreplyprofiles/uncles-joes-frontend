@@ -1,20 +1,81 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Uncle Joe's Coffee Company
 
-# Run and deploy your AI Studio app
+A single-page React app for Uncle Joe's Coffee Company. Browse the menu, find store locations, and manage your Coffee Club membership and rewards.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/d3de1eae-3da4-49c0-bbeb-70ff6485ef78
+- **Home** — Hero section with brand messaging and quick-access navigation
+- **Menu** — Full menu with search and category filters, including sizing, calories, and pricing
+- **Locations** — Store locator with real-time open/closed status, hours, and amenities (WiFi, Drive-Thru, DoorDash)
+- **Coffee Club Login** — Member authentication with session persistence
+- **Dashboard** — Rewards points balance, order history, and points breakdown per order
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+| | |
+|---|---|
+| Framework | React 19 + TypeScript |
+| Build Tool | Vite 6 |
+| Styling | Tailwind CSS 4 |
+| Animations | Framer Motion (motion) |
+| Icons | Lucide React |
+| AI | Google Gemini API (@google/genai) |
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Environment setup
+
+```bash
+cp .env.example .env
+```
+
+| Variable | Description |
+|---|---|
+| `GEMINI_API_KEY` | Google Generative AI API key (required) |
+| `APP_URL` | Application URL — auto-injected by AI Studio |
+
+### Run the dev server
+
+```bash
+npm run dev
+```
+
+Opens at `http://localhost:3000`
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | TypeScript type check |
+| `npm run clean` | Remove `/dist` |
+
+## API
+
+Connects to a backend hosted on Google Cloud Run:
+
+```
+https://uncles-joes-api-697166575778.us-central1.run.app
+```
+
+| Endpoint | Description |
+|---|---|
+| `GET /menu` | Menu items |
+| `GET /locations` | Store locations |
+| `POST /login` | Member authentication |
+| `GET /members/:id/orders` | Order history |
+| `GET /members/:id/points` | Points balance |
+| `GET /members/:id/points/history` | Points breakdown |
